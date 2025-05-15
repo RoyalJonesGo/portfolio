@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Royal Jones Go - Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        section {
+            width: 100vw;
+            min-height: 100vh;
+            padding: 50px;
+        }
+
+        .cl-white {
+            color: white;
+        }
+
+        img {
+            width: 300px;
+            transition: opacity 1s ease-in-out;
+        }
+
+        img:hover {
+            opacity: 0.7;
+        }
+
+        .col-text {
+        }
+
+        .img-thumbnail {
+            margin: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .seminar-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .seminar-gallery img {
+            width: auto;
+            max-height: 150px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        .modal-dialog {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .modal-content {
+            border: none;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .modal-body img {
+            width: 100%;
+            height: auto;
+        }
+
+        .lead {
+            line-height: 1.7;
+            font-size: 1.2em;
+            font-weight: 500;
+            color: #333;
+        }
+
+        #home h1 {
+            font-weight: bold;
+        }
+
+        #home .lead {
+            color: white;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+    <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#work">What I Do</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" style="background: url('image/header.jpg') no-repeat center center fixed; background-size: cover;"
+        class="cl-white text-center">
+        <h1>Royal Jones Go</h1>
+        <p class="lead">Welcome to my portfolio!</p>
+    </section>
+
+    <section id="work" class="container">
+        <div class="page-header">
+            <h1 class="text-center">What I Do</h1>
+        </div>
+        <div class="text-center">
+            <img src="image/portfolio1.png" class="img-thumbnail" alt="Project 1">
+            <img src="image/portfolio2.png" class="img-thumbnail" alt="Project 2">
+            <img src="image/portfolio3.png" class="img-thumbnail" alt="Project 3">
+            <img src="image/portfolio4.png" class="img-thumbnail" alt="Project 4">
+            <img src="image/portfolio5.png" class="img-thumbnail" alt="Project 5">
+            <img src="image/portfolio6.png" class="img-thumbnail" alt="Project 6">
+        </div>
+    </section>
+
+    <section id="about" style="background-color: #f0f0f0;">
+        <div class="page-header">
+            <h1 class="text-center">About Me</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <img src="image/profile.png" alt="My Picture" class="img-circle center-block" style="width: 200px;">
+                <h3 class="text-center">Royal Jones Go</h3>
+                <p class="lead text-center">BS Computer Science student from New Era University with skills in database
+                    management and familiarity with various programming languages and tools.</p>
+
+                <h4>Education</h4>
+                <p><strong>BS Computer Science</strong><br>
+                    New Era University (2022-Present)</p>
+
+                <h4>Skills</h4>
+                <ul>
+                    <li>PHP</li>
+                    <li>Java</li>
+                    <li>SQL</li>
+                    <li>Lucidchart</li>
+                    <li>Jaspersoft Studio</li>
+                    <li>Pentaho</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Databases: IBM DB2 Cloud</li>
+                </ul>
+
+                <h4>Certifications</h4>
+                <ul>
+                    <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=3D5692556CF3E7641D7E2872D010CA9172DCFB50796B3C02E338D4B7A3B97840"
+                            target="_blank">Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate</a></li>
+                    <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E518AE87857434FF7A572BA9DBDB44260F962444DB74BCFE01DF515D8A9E5D82"
+                            target="_blank">Oracle Cloud Data Management 2023 Certified Foundations Associate</a></li>
+                    <li><a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=7A897925A16A17894CF1153556EEE460EAFA71625E818B89FCE52BAA3A3163A0"
+                            target="_blank">Oracle Cloud Infrastructure 2023 Certified Foundations Associate</a></li>
+                    <li><a href="https://courses.cognitiveclass.ai/certificates/561f75da4cb540f3bcfa17eb926dd8e2"
+                            target="_blank">SQL and Relational Databases 101</a></li>
+                </ul>
+
+                <h4>Seminar Attendances</h4>
+                <div class="seminar-gallery">
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-image-src="image/seminar1.png">
+                        <img src="image/seminar1.png" alt="LLMs Demystified">
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-image-src="image/seminar2.png">
+                        <img src="image/seminar2.png" alt="Roles in Cybersecurity">
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-image-src="image/seminar3.png">
+                        <img src="image/seminar3.png" alt="Agile Testing in Action">
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-image-src="image/seminar4.png">
+                        <img src="image/seminar4.png" alt="Data Driven Facilities Management">
+                    </a>
+                    <a href="#" data-toggle="modal" data-target="#imageModal" data-image-src="image/seminar5.png">
+                        <img src="image/seminar5.png" alt="SQL - Backend">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: silver;">
+        <div class="page-header">
+            <h2 class="text-center">Contact Me</h2>
+        </div>
+        <div class="row">
+            <form class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Enter Your Name" type="text" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Enter Your Email" type="email" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Subject" type="text" />
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Comments"></textarea>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-success btn-block" type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="" class="img-responsive" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.seminar-gallery a').click(function () {
+                var imgSrc = $(this).data('image-src');
+                $('#modalImage').attr('src', imgSrc);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
